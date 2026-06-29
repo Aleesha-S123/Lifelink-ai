@@ -9,7 +9,6 @@ export async function sendChatMessage(message) {
   formData.append("message", message);
 
   const response = await API.post("/chat", formData);
-
   return response.data.reply;
 }
 
@@ -18,6 +17,5 @@ export async function sendAccessibilityFile(file) {
   formData.append("file", file);
 
   const response = await API.post("/accessibility-text", formData);
-
   return response.data.reply;
 }
